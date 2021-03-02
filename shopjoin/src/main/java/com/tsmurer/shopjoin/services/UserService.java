@@ -5,7 +5,14 @@ import com.tsmurer.shopjoin.dtos.UserTO;
 
 public class UserService {
 
-    public User register(UserTO user){
-        return new User; //escrever método de registro
-    }
+    // register
+    public void register(UserTO user){ }
+
+    public void validateRegister(UserTO user){ }
+
+    // signin
+
+    public void signin(UserTO user){ }
+
+    public void validateSignin(User existingUser, UserTO providedData){ }
 }
