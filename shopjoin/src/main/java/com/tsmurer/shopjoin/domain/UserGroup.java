@@ -11,7 +11,7 @@ import java.util.Set;
 @Table(name = "user_group")
 public class UserGroup {
 
-    @Id
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "user_group_id")
     private Long userGroupId;
     @Column(name = "name")

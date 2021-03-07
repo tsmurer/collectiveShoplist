@@ -10,7 +10,7 @@ import java.util.Set;
 @Table(name = "user")
 public class User {
 
-    @Id
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long userId;
     @Column(name = "username")
@@ -19,6 +19,8 @@ public class User {
     private String password;
     @Column(name = "name")
     private String name;
+    @Column(name = "email")
+    private String email;
     @ManyToMany(mappedBy = "users", fetch = FetchType.LAZY)
     private Set<UserGroup> userGroups;
 

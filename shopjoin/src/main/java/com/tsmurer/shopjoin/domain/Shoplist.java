@@ -10,7 +10,7 @@ import java.util.Set;
 @Table(name = "shoplist")
 public class Shoplist {
 
-    @Id
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "shoplist_id")
     private Long shoplistId;
     @Column(name = "name")
