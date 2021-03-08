@@ -1,0 +1,26 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop;
+name: test-YAML
+environment: testing
+enabled: false
+servers:
+  - www.abc.test.com
+  - www.xyz.test.com
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+name: prod-YAML
+environment: production
+enabled: true
+servers:
+  - www.abc.com
+  - www.xyz.com
