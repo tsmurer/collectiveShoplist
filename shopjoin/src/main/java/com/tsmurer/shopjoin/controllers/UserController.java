@@ -24,8 +24,12 @@ public class UserController {
     @PostMapping(path="/register")
     public ResponseEntity<Object> register(@RequestBody UserTO userto) {
         try {
-            User RegisteredUser = userService.register(userto);
-            UserTO to = UserFactory.getUserTO(RegisteredUser);
+            System.out.println("Request body recebido:");
+            System.out.println(userto.toString());
+            User registeredUser = userService.register(userto);
+            System.out.println("registeredUser");
+            System.out.println(registeredUser.toString());
+            UserTO to = UserFactory.getUserTO(registeredUser);
             return ResponseEntity.ok(to);
         } catch(ValidationException e) {
             return ResponseEntity.status(400).body(e.getMessage());

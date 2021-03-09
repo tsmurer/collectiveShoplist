@@ -15,6 +15,7 @@ public class UserFactory{
                 .userId(userTO.getUserId())
                 .email(userTO.getEmail())
                 .username(userTO.getUsername())
+                .password(userTO.getPassword())
                 .name(userTO.getName())
                 .build();
     }

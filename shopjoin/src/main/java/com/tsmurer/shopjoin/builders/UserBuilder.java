@@ -7,8 +7,8 @@ public class UserBuilder {
     private long userId;
     private String username;
     private String name;
-    private String email;
     private String password;
+    private String email;
 
     public static UserBuilder getInstance() {
         return new UserBuilder();
@@ -43,6 +43,7 @@ public class UserBuilder {
         User user = new User();
         user.setUserId(userId);
         user.setUsername(username);
+        user.setEmail(email);
         user.setName(name);
         user.setPassword(password);
 
